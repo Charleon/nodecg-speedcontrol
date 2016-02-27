@@ -2,6 +2,7 @@
 $(function () {
     // JQuery selector initialiation ###
     var $timerInfo = $('#timer');
+    var $delimiters = $("img.playerDelimiter");
     var $runnerInfoElements = $('div.runnerInfo');
     var $runnerTimerFinishedElements = $('.runnerTimerFinished')
     var $runnerTimerFinishedContainers = $('.runnerTimerFinishedContainer');
@@ -9,7 +10,8 @@ $(function () {
     var $runInformationCategory = $('#runInformationGameCategory');
     var $runInformationEstimate = $('#runInformationGameEstimate');
     var $runInformationName = $('#runInformationGameName');
-    var $twitchLogos = $('.twitchLogo');
+    var $twitchLogos = $('img.twitchLogo');
+    var $playerLogos = $('img.playerLogo');
     var $gameCaptures = $('.gameCapture');
 
     var currentTime = '';
@@ -55,7 +57,13 @@ $(function () {
             animation_setGameFieldAlternate($(this),getRunnerInformationName(newValue,index));
         });
 
+        $delimiters.each( function( index, element ) {
+            animation_shrinkHeightRotateRevert($(this));
+        });
+
         if(timeoutTwitch != null) {
+            clearTimeout(timeoutTwitch);
+            hideTwitch();
             clearTimeout(timeoutTwitch);
         }
 
@@ -73,7 +81,7 @@ $(function () {
 
         animation_setGameField($runInformationSystem,runInfoGameSystem);
         animation_setGameField($runInformationCategory,runInfoGameCategory);
-        animation_setGameField($runInformationEstimate,runInfoGameEstimate);
+        animation_setGameFieldOpacityOnly($runInformationEstimate,runInfoGameEstimate);
         animation_setGameField($runInformationName,runInfoGameName);
     }
 
@@ -140,14 +148,23 @@ $(function () {
             }
         });
 
-        var tm = new TimelineMax({paused: true});
-        $twitchLogos.each( function(index, element) {
+        $playerLogos.each( function(index, element) {
             if($.inArray(index, indexesToNotUpdate) == -1) {
-                animation_showZoomIn($(this));
+                animation_translateOutTop($(this));
             }
         });
 
-        tm.play();
+        $twitchLogos.each( function(index, element) {
+            if($.inArray(index, indexesToNotUpdate) == -1) {
+                animation_translateInFromBottom($(this));
+            }
+        });
+
+        $delimiters.each( function( index, element ) {
+            animation_shrinkHeightRotateRevert($(this));
+        });
+
+
         timeoutTwitch = setTimeout(hideTwitch,displayTwitchforMilliseconds);
     }
 
@@ -162,11 +179,22 @@ $(function () {
             }
         });
 
-        $twitchLogos.each( function(index, element) {
+        $playerLogos.each( function(index, element) {
             if($.inArray(index, indexesToNotUpdate) == -1) {
-                animation_hideZoomOut($(this));
+                animation_translateBackInFromTop($(this));
             }
         });
+
+        $twitchLogos.each( function(index, element) {
+            if($.inArray(index, indexesToNotUpdate) == -1) {
+                animation_translateOutBottom($(this));
+            }
+        });
+
+        $delimiters.each( function( index, element ) {
+            animation_shrinkHeightRotateRevert($(this));
+        });
+
 
         timeoutTwitch = setTimeout(displayTwitchInstead,intervalToNextTwitchDisplay);
     }
@@ -218,16 +246,22 @@ $(function () {
         }
     }
 
+    function hideInformationContainers(){
+        animation_fadeOutOpacity($(".playerContainer"));
+        animation_fadeOutOpacity($("#runInformationContainer"));
+    }
+
+    function showInformationContainers(){
+        animation_fadeInOpacity($(".playerContainer"));
+        animation_fadeInOpacity($("#runInformationContainer"));
+    }
+
     //
     // Layout initialization (runs once when the overlay loads)
     //
 
     $runnerTimerFinishedElements.each( function( index, e ){
         hideTimerFinished(index);
-    });
-
-    $twitchLogos.each( function(index, element) {
-        $(this).css('transform', 'scale(0)');
     });
 
     $gameCaptures.each(function () {

@@ -1,11 +1,18 @@
 <html data-sceneid="Single_4_3">
 <head>
     <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/nameplates.css" rel="stylesheet"/>
+    <link href="css/timer.css" rel="stylesheet"/>
+    <link href="css/gameinformation.css" rel="stylesheet"/>
+    <link href="css/gamecapture.css" rel="stylesheet"/>
+    <link href="css/editmode.css" rel="stylesheet"/>
+    <link href="css/webcam.css" rel="stylesheet"/>
     <script src="components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/speedcontrol.js"></script>
     <script src="js/editmode.js"></script>
+    <script src="js/webcamLogic.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/cupertino/jquery-ui.css" />
 </head>
@@ -22,13 +29,19 @@
                 <button id="resetCSSContentButton">Reset Layout</button>
             </div>
         </div>
+        <div id="marathonLogo" class="positionable resizable keepproportion"> </div>
         <div id="gameCapture1" class="positionable gameCapture" aspect-ratio="4:3">
         </div>
-        <div id="marathonLogo" class="positionable resizable keepproportion"> </div>
-        <div id="player1Container" class="playerContainer positionable resizable keepproportion">
+        <div id="webcam" class="webCam resizable positionable">
+            <div id="webcamCover">
+            </div>
+        </div>
+        <div id="player1Container" class="playerContainer positionable resizable">
             <div class="runnerLogo">
+                <img class="playerLogo" src="/graphics/nodecg-speedcontrol/images/PlayerIcon.png">
                 <img class="twitchLogo" src="/graphics/nodecg-speedcontrol/images/twitchlogo.png">
             </div>
+            <div class="playerLogoDelimiter">  <img class="playerDelimiter" src="/graphics/nodecg-speedcontrol/images/Delimiter.png"> </div>
             <div class="runnerInfo"> </div>
         </div>
         <div id="timerContainer" class="positionable resizable">
@@ -38,14 +51,25 @@
             </div>
         </div>
         <div id="runInformationContainer" class="positionable resizable">
-            <div id="runInformationLogo">
-            </div>
             <div id="runInformationFields">
-                <div id="runInformationGameName">
+                <div id="runInformationTopRow">
+                    <div id="runGameNameIcon">
+                        <img class="runInformationGameNameImage" src="/graphics/nodecg-speedcontrol/images/GameIcon.png">
+                    </div>
+                    <div id="runInformationGameName">
+                    </div>
                 </div>
-                <div id="runInformationGameCategory">
-                </div>
-                <div id="runInformationGameSystem">
+                <div id="runInformationBottomRow">
+                    <div id="runGameCategoryIcon">
+                        <img class="runInformationGameCategoryImage" src="/graphics/nodecg-speedcontrol/images/CategoryIcon.png">
+                    </div>
+                    <div id="runInformationGameCategory">
+                    </div>
+                    <div id="runGameSystemIcon">
+                        <img class="runInformationGameSystemImage" src="/graphics/nodecg-speedcontrol/images/ConsoleIcon.png">
+                    </div>
+                    <div id="runInformationGameSystem">
+                    </div>
                 </div>
             </div>
         </div>

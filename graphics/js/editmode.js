@@ -10,8 +10,8 @@ $(function () {
     // if there are two views with the same sceneID all the elements will not have the correct positions
     var sceneID = $('html').attr('data-sceneid');
 
-    var screenHeight = $(window).height();
-    var screenWidth = $(window).width();
+    var screenHeight = $("#window-container").height();
+    var screenWidth = $("#window-container").width();
     console.log("height = " + screenHeight);
     var font = parseFloat($('body').css('font-size'));
     var scaleRatio = screenHeight / 720;
@@ -179,10 +179,10 @@ $(function () {
             var height = $(this).height();
 
             cssTemplate = cssTemplate.replace('itemid',itemID);
-            cssTemplate = cssTemplate.replace('topValue',topOffset/screenHeight * 100 + "%");
-            cssTemplate = cssTemplate.replace('leftValue',leftOffset/screenWidth * 100 + "%");
-            cssTemplate = cssTemplate.replace('widthValue',width/screenWidth * 100 + "%");
-            cssTemplate = cssTemplate.replace('heightValue',height/screenHeight * 100 + "%");
+            cssTemplate = cssTemplate.replace('topValue',topOffset+"px");
+            cssTemplate = cssTemplate.replace('leftValue',leftOffset+"px");
+            cssTemplate = cssTemplate.replace('widthValue',width+"px");
+            cssTemplate = cssTemplate.replace('heightValue',height + "px");
             completeCss += cssTemplate;
         });
         return completeCss;

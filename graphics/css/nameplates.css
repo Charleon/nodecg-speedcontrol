@@ -1,0 +1,59 @@
+img.playerLogo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+}
+
+img.twitchLogo {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: 70px;
+    left: 10px;
+}
+
+.playerLogoDelimiter {
+    width: 10px;
+    height: 70px;
+}
+
+img.playerDelimiter {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+}
+
+/* Top Level */
+.playerContainer {
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    width: 440px;
+    height: 70px;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid rgba(150,91,222,0.1);
+}
+
+.runnerLogo {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.runnerInfo {
+    font-family: FFFForward;
+    color: #8d7996;
+    line-height: 70px;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 15px;
+    flex: 1;
+}

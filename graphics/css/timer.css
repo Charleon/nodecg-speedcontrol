@@ -1,0 +1,42 @@
+#timerContainer {
+    position: fixed;
+    top: 400px;
+    left: 700px;
+    width: 440px;
+    height: 140px;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(150,91,222,0.1);
+}
+
+#timer {
+    position: relative;
+    font-family: FFFForward;
+    font-size: 45px;
+    text-align: center;
+    top: 5px;
+}
+
+#runInformationGameEstimate {
+    position: relative;
+    top: 10%;
+    font-family: FFFForward;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255,255,255,0.25);
+}
+
+.timer_paused {
+    color: cornflowerblue;
+}
+
+.timer_running {
+    color: rgba(255,255,255,0.7);
+}
+
+.timer_stopped {
+    color: gray;
+}
+
+.timer_finished {
+    color: #e8c419;
+}
