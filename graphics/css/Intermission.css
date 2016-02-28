@@ -22,20 +22,23 @@ body {
 }
 
 #comingUp {
+    position: relative;
+    top: 0px;
+    left: 0px;
     font-family: FFFForward;
-    color: #856899;
     font-size: 20px;
-    text-align: right;
     padding-bottom: 15px;
-    width: 400px;
+    width: 100%;
 }
 
 #justMissed {
+    position: relative;
+    top: 0px;
+    left: 0px;
     font-family: FFFForward;
-    color: #856899;
     font-size: 20px;
     padding-bottom: 15px;
-    width: 400px;
+    width: 100%;
 }
 
 #comingUpRun {
@@ -47,15 +50,26 @@ body {
     width: 400px;
 }
 
-#justMissedRun {
+#justMissedRunContainer {
     position: absolute;
     font-family: FFFForward;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     font-size: 14px;
-    width: 400px;
+    width: 500px;
+    min-width: 500px;
 }
 
+
+#comingUpRunContainer {
+    position: absolute;
+    font-family: FFFForward;
+    display: flex;
+    flex-flow: column;
+    font-size: 14px;
+    width: 500px;
+    min-width: 500px;
+}
 
 #informationMarquee {
     font-family: FFFForward;
@@ -74,44 +88,238 @@ body {
 }
 
 #comingUpGame {
-    padding: 2px;
-    color: #856899;
-    width: 400px;
-    background: #362b41;
+    font-family: FFFForward;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: left;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #comingUpSystem {
-    padding-right: 5px;
-    color: #856899;
-    width: 100px;
-    text-align: right;
-    background: #271e2f;
+    font-family: FFFForward;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 5px;
+    padding-right: 10px;
+    line-height: 58px;
+    overflow: hidden;
 }
 #comingUpCathegory {
-    padding: 2px;
-    color: #856899;
-    width: 220px;
-    background: #271e2f;
+    font-family: FFFForward;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 58px;
+    flex-grow: 5;
+    overflow: hidden;
 }
 
 #justMissedGame {
-    padding: 2px;
-    color: #856899;
-    width: 400px;
-    background: #362b41;
+    font-family: FFFForward;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: left;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #justMissedSystem {
-    padding-right: 5px;
-    color: #856899;
-    width: 100px;
-    text-align: right;
-    background: #271e2f;
+    font-family: FFFForward;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 5px;
+    padding-right: 10px;
+    line-height: 58px;
+    overflow: hidden;
 }
+
 #justMissedCathegory {
-    padding: 2px;
-    color: #856899;
+    font-family: FFFForward;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 58px;
+    flex-grow: 5;
+    overflow: hidden;
+}
+
+#runInformationContainer {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 420px;
+    height: 100px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(150,91,222,0.2);
+}
+
+#justMissedContainer {
+    display: flex;
+    flex-flow: row;
+    background-color: #432c65;
+    box-shadow: 3px 3px 2px #000000;
+    margin-bottom: 10px;
+    min-height: 40px;
+    height: 40px;
+}
+
+#comingUpContainer {
+    display: flex;
+    flex-flow: row;
+    background-color: #432c65;
+    box-shadow: 3px 3px 2px #000000;
+    margin-bottom: 10px;
+    min-height: 40px;
+    height: 40px;
+}
+
+.informationIcon {
+    height: 100%;
+    width: 50px;
+    padding-top: 3px;
+}
+
+img.informationIconImage {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.runGameSystemIcon {
+    height: 100%;
+    width: 60px;
+    min-width: 50px;
+    padding-top: 5px;
+}
+
+.runInformationContainer {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 90%;
+    height: 100px;
+    min-height: 100px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(150,91,222,0.2);
+}
+
+.runInformationFields {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.runInformationTopRow {
+    width: 100%;
+    height: 42%;
+    min-height: 42%;
+    background: #432c65;
+    display: flex;
+    flex-flow: row;
+}
+
+.runGameNameIcon {
+    height: 100%;
+    width: 50px;
+    padding-top: 2px;
+}
+
+.runInformationBottomRow {
+    width: 100%;
+    height: 49%;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+.runGameCategoryIcon {
+    height: 100%;
+    width: 50px;
+    min-width: 50px;
+    padding-top: 10px;
+}
+
+.playerInformationContainer {
+    position: relative;
+    width: 500px;
+    top: 0px;
+    left: 25px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+/* Top Level */
+.playerContainer {
+    position: relative;
+    top: 0px;
+    left: 0px;
     width: 220px;
-    background: #271e2f;
+    min-width: 220px;
+    height: 35px;
+    min-height: 35px;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid rgba(150,91,222,0.1);
+}
+
+.runnerLogo {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.runnerInfo {
+    font-family: FFFForward;
+    color: #8d7996;
+    line-height: 35px;
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 7px;
+    flex: 1;
+}
+
+.playerLogoDelimiter {
+    width: 5px;
+    height: 35px;
+}
+
+img.playerDelimiter {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+    height: 50%;
+}
+
+img.playerLogo {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 5px;
 }
 

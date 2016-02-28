@@ -2,6 +2,8 @@
 <head>
     <link href="css/common.css" rel="stylesheet"/>
     <link href="css/editmode.css" rel="stylesheet"/>
+    <link href="css/gameinformation.css" rel="stylesheet"/>
+    <link href="css/nameplates.css" rel="stylesheet"/>
     <link href="css/Intermission.css" rel="stylesheet"/>
     <script src="components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="components/jquery/dist/jquery.min.js"></script>
@@ -9,9 +11,6 @@
     <script src="js/Intermission.js"></script>
     <script src="js/editmode.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <style>
-
-    </style>
 </head>
 <body>
 <div id="window-container">
@@ -25,24 +24,79 @@
             <button id="resetCSSContentButton">Reset Layout</button>
         </div>
     </div>
-    <div id="comingUpRun" class="positionable">
-        <div id="comingUp">
-            Coming up..
+
+    <div id="justMissedRunContainer" class="positionable">
+        <div id="justMissedContainer">
+            <div class="informationIcon">
+                <img class="informationIconImage" src="/graphics/nodecg-speedcontrol/images/InformationIcon.png">
+            </div>
+            <div id="justMissed">
+                You just missed..
+            </div>
         </div>
-        <div id="comingUpGame"> </div>
-        <div id="comingUpCathegory"> </div>
-        <div id="comingUpSystem"> </div>
-        <div id="comingUpPlayer"> </div>
-    </div>
-    <div id="justMissedRun" class="positionable">
-        <div id="justMissed">
-            You just missed..
+        <div class="runInformationContainer">
+            <div class="runInformationFields">
+                <div class="runInformationTopRow">
+                    <div class="runGameNameIcon">
+                        <img class="runInformationGameNameImage" src="/graphics/nodecg-speedcontrol/images/GameIcon.png">
+                    </div>
+                    <div id="justMissedGame">
+                    </div>
+                </div>
+                <div class="runInformationBottomRow">
+                    <div class="runGameCategoryIcon">
+                        <img class="runInformationGameCategoryImage" src="/graphics/nodecg-speedcontrol/images/CategoryIcon.png">
+                    </div>
+                    <div id="justMissedCathegory">
+                    </div>
+                    <div class="runGameSystemIcon">
+                        <img class="runInformationGameSystemImage" src="/graphics/nodecg-speedcontrol/images/ConsoleIcon.png">
+                    </div>
+                    <div id="justMissedSystem">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="justMissedGame"> </div>
-        <div id="justMissedCathegory"> </div>
-        <div id="justMissedSystem"> </div>
-        <div id="justMissedPlayer"> </div>
+        <div class="playerInformationContainer">
+        </div>
     </div>
+
+    <div id="comingUpRunContainer" class="positionable">
+        <div id="comingUpContainer">
+            <div class="informationIcon">
+                <img class="informationIconImage" src="/graphics/nodecg-speedcontrol/images/InformationIcon.png">
+            </div>
+            <div id="comingUp">
+                Coming up..
+            </div>
+        </div>
+        <div class="runInformationContainer">
+            <div class="runInformationFields">
+                <div class="runInformationTopRow">
+                    <div class="runGameNameIcon">
+                        <img class="runInformationGameNameImage" src="/graphics/nodecg-speedcontrol/images/GameIcon.png">
+                    </div>
+                    <div id="comingUpGame">
+                    </div>
+                </div>
+                <div class="runInformationBottomRow">
+                    <div class="runGameCategoryIcon">
+                        <img class="runInformationGameCategoryImage" src="/graphics/nodecg-speedcontrol/images/CategoryIcon.png">
+                    </div>
+                    <div id="comingUpCathegory">
+                    </div>
+                    <div class="runGameSystemIcon">
+                        <img class="runInformationGameSystemImage" src="/graphics/nodecg-speedcontrol/images/ConsoleIcon.png">
+                    </div>
+                    <div id="comingUpSystem">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playerInformationContainer">
+        </div>
+    </div>
+
     <div id="informationMarquee" class="positionable">
     </div>
 </div>

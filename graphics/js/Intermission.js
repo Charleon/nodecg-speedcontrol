@@ -73,15 +73,33 @@ $(function () {
 
     // Replicant functions ###
     function changeComingUpRunInformation(runData) {
+        var playerPanelHTML =
+            '<div class="playerContainer">' +
+            '<div class="runnerLogo">' +
+            '<img class="playerLogo" src="/graphics/nodecg-speedcontrol/images/PlayerIcon.png">' +
+            '</div>' +
+            '<div class="playerLogoDelimiter">  <img class="playerDelimiter" src="/graphics/nodecg-speedcontrol/images/Delimiter.png"> </div>' +
+            '<div class="runnerInfo"> </div>' +
+            '</div>';
         var game = "END";
         var category = "";
         var system = "";
+        var players = [];
 
         if(typeof runData !== "undefined") {
             game = runData.game;
             category =  runData.category;
             system = runData.system;
+            players = runData.players;
+            $.each(players, function(index, player) {
+                $('.playerInformationContainer').eq(1).append(playerPanelHTML);
+            });
         }
+
+        var $runnerInfoElements = $('#comingUpRunContainer .runnerInfo');
+        $runnerInfoElements.each( function( index, element ) {
+            animation_setGameFieldAlternate($(this),getRunnerInformationName(runData.players,index));
+        });
 
         animation_setGameField($comingUpGame,game);
         animation_setGameField($comingUpCathegory,category);
@@ -89,22 +107,54 @@ $(function () {
     }
 
     function changeJustMissedRunInformation(runData) {
+        var playerPanelHTML =
+            '<div class="playerContainer">' +
+                '<div class="runnerLogo">' +
+                    '<img class="playerLogo" src="/graphics/nodecg-speedcontrol/images/PlayerIcon.png">' +
+                '</div>' +
+                '<div class="playerLogoDelimiter">  <img class="playerDelimiter" src="/graphics/nodecg-speedcontrol/images/Delimiter.png"> </div>' +
+                '<div class="runnerInfo"> </div>' +
+            '</div>';
         var game = "END";
         var category = "";
         var system = "";
+        var players = [];
 
         if(typeof runData !== "undefined") {
             game = runData.game;
             category =  runData.category;
             system = runData.system;
+            players = runData.players;
+            $.each(players, function(index, player) {
+                $('.playerInformationContainer').first().append(playerPanelHTML);
+            });
         }
 
         animation_setGameField($justMissedGame,game);
         animation_setGameField($justMissedCathegory,category);
         animation_setGameField($justMissedSystem,system);
+
+        var $runnerInfoElements = $('#justMissedRunContainer .runnerInfo');
+        $runnerInfoElements.each( function( index, element ) {
+            animation_setGameFieldAlternate($(this),getRunnerInformationName(runData.players,index));
+        });
+
+        var $delimiters = $("img.playerDelimiter");
+        $delimiters.each( function( index, element ) {
+            animation_shrinkHeightRotateRevert($(this));
+        });
     }
 
     // General functions ###
+
+    // Gets the runner with index 'index' in the runnerarray's nickname from the rundata Replicant
+    function getRunnerInformationName(runnerDataArray, index) {
+        if(typeof runnerDataArray[index] === 'undefined') {
+            console.log("Player nonexistant!");
+            return "";
+        }
+        return runnerDataArray[index].names.international;
+    }
 
     function applyBackgroundTransparence(value) {
         if (value == 'On') {
