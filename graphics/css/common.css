@@ -72,3 +72,7 @@ body {
     background-position: center;
     background-size: 76%;
 }
+
+#webcamCover {
+    opacity: 0;
+}

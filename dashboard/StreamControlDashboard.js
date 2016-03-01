@@ -8,7 +8,7 @@ $(function () {
     var $enableTwitchSynchronizationRadio = $('input[name=enableTwitchSynchronizationRadio]');
     var errorMessage = "If you want to use the twitch functionality, you need to create a file called nodecg-speedcontrol.json in nodecg/cfg and fill it with:\n" +
         "{\n" +
-        "\"enableTwitchApi\": true\n" +
+        "\"enableTwitchApi\": true,\n" +
         "\"user\": \"twitchusername\"\n" +
         "}\n" +
         "exchange username with the twitch username which you want to access"

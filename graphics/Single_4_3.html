@@ -7,10 +7,12 @@
     <link href="css/gamecapture.css" rel="stylesheet"/>
     <link href="css/editmode.css" rel="stylesheet"/>
     <link href="css/webcam.css" rel="stylesheet"/>
+    <link href="css/clock.css" rel="stylesheet"/>
     <script src="components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/speedcontrol.js"></script>
+    <script src="js/clock.js"></script>
     <script src="js/editmode.js"></script>
     <script src="js/webcamLogic.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -48,6 +50,11 @@
             <div id="timer">
             </div>
             <div id="runInformationGameEstimate">
+            </div>
+            <div id="clock" class="positionable">
+                <div id="hours"></div>
+                <div id="point">:</div>
+                <div id="minutes"></div>
             </div>
         </div>
         <div id="runInformationContainer" class="positionable resizable">

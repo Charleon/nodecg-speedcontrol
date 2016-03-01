@@ -1,0 +1,46 @@
+#clock {
+    position: absolute;
+    padding: 5px;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    flex-flow: row;
+    width: 70px;
+}
+
+#hours,#minutes {
+    font-family: FFFForward;
+    width: 20px;
+    margin: 0px;
+    padding: 0px;
+    color: #6e6c6f;
+}
+
+
+#point {
+    font-family: FFFForward;
+    width: 20px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #6e6c6f;
+    -moz-animation: mymove 1s ease infinite;
+    -webkit-animation: mymove 1s ease infinite;
+}
+
+/* Simple Animation */
+@-webkit-keyframes mymove {
+    0% {opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.7;
+
+    }
+
+    100% {
+        opacity: 1.0;
+
+    }
+}
