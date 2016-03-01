@@ -35,10 +35,9 @@ body {
 #marathonLogo {
     position: fixed;
     top: 0px;
-    width: 223px;
-    height: 87px;
     background-image: url('/graphics/nodecg-speedcontrol/images/EsaLogo.png');
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .runnerTimerFinishedContainer {

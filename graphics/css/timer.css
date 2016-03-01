@@ -4,8 +4,7 @@
     left: 700px;
     width: 440px;
     height: 140px;
-    background: rgba(0,0,0,0.2);
-    border: 2px solid rgba(150,91,222,0.1);
+    background-color: rgba(127,104,74,0.2);
 }
 
 #timer {
