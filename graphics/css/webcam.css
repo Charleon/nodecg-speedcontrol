@@ -1,5 +1,5 @@
 .webcam {
-    position: fixed;
+    position: absolute !important;
     top: 0px;
     left: 0px;
     width: 100px;

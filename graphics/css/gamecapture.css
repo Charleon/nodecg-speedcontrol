@@ -1,5 +1,5 @@
 .gameCapture {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     background-color: #00DD00;
