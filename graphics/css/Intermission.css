@@ -270,20 +270,6 @@ img.informationIconImage {
     flex-wrap: wrap;
 }
 
-/* Top Level */
-.playerContainer {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 220px;
-    min-width: 220px;
-    height: 35px;
-    min-height: 35px;
-    display: flex;
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.2);
-}
-
 .runnerLogo {
     width: 35px;
     height: 35px;
@@ -322,5 +308,19 @@ img.playerLogo {
     height: 30px;
     top: 2px;
     left: 5px;
+}
+
+/* Top Level */
+.playerContainerIntermission {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 220px;
+    min-width: 220px;
+    height: 35px;
+    min-height: 35px;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
 }
 

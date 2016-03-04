@@ -74,7 +74,7 @@ $(function () {
     // Replicant functions ###
     function changeComingUpRunInformation(runData) {
         var playerPanelHTML =
-            '<div class="playerContainer">' +
+            '<div class="playerContainerIntermission">' +
             '<div class="runnerLogo">' +
             '<img class="playerLogo" src="/graphics/nodecg-speedcontrol/images/PlayerIcon.png">' +
             '</div>' +
@@ -108,7 +108,7 @@ $(function () {
 
     function changeJustMissedRunInformation(runData) {
         var playerPanelHTML =
-            '<div class="playerContainer">' +
+            '<div class="playerContainerIntermission">' +
                 '<div class="runnerLogo">' +
                     '<img class="playerLogo" src="/graphics/nodecg-speedcontrol/images/PlayerIcon.png">' +
                 '</div>' +
