@@ -14,7 +14,7 @@ $(function () {
         "exchange username with the twitch username which you want to access"
     var streamControlConfigurationReplicant = nodecg.Replicant('streamControlConfiguration');
     streamControlConfigurationReplicant.on('change', function (oldVal, newVal) {
-        if (typeof newVal !== 'undefined') {
+        if (typeof newVal !== 'undefined' && newVal != '' ) {
             if (newVal.synchronizeAutomatically != null && newVal.synchronizeAutomatically == true) {
                 var radio = $('#enableTwitchSynchronizationRadioOn');
                 radio[0].checked = true;
@@ -67,7 +67,7 @@ $(function () {
 
     function streamControl_GetOrCreateStreamControlConfiguration() {
         var configuration = streamControlConfigurationReplicant.value;
-        if (typeof configuration !== 'undefined') {
+        if (typeof configuration !== 'undefined' && configuration != "") {
             return configuration;
         }
         else {
