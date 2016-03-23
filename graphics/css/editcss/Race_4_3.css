@@ -1,0 +1,64 @@
+#runner1TimerFinishedContainer {
+    position: fixed;
+    top: 175px;
+    left: 170px;
+    width: 183px;
+    height: 80px;
+}
+
+#runner2TimerFinishedContainer {
+    position: fixed;
+    top: 175px;
+    left: 1590px;
+    width: 180px;
+    height: 80px;
+}
+
+#player1Container {
+    position: fixed;
+    top: 255px;
+    left: 130px;
+    width: 300px;
+    height: 100px;
+}
+
+#player2Container {
+    position: fixed;
+    top: 255px;
+    left: 1560px;
+    width: 300px;
+    height: 100px;
+}
+
+#timerContainer {
+    position: fixed;
+    top: 90px;
+    left: 50px;
+    width: 440px;
+    height: 88px;
+}
+
+#runInformationGameEstimate {
+    position: fixed;
+    top: 115px;
+    left: 1480px;
+    width: 400px;
+    height: 100px;
+}
+
+#runInformationGameName {
+    position: fixed;
+    top: 5px;
+    left: 1405px;
+    width: 400px;
+    height: 91px;
+}
+
+#runInformationGameCategory {
+    position: fixed;
+    top: 10px;
+    left: 240px;
+    width: 500px;
+    height: 89px;
+}
+

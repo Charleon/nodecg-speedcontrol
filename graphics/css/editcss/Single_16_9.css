@@ -1,0 +1,40 @@
+#player1Container {
+    position: fixed;
+    top: 410px;
+    left: 125px;
+    width: 400px;
+    height: 100px;
+}
+
+#timerContainer {
+    position: fixed;
+    top: 705px;
+    left: 45px;
+    width: 440px;
+    height: 89px;
+}
+
+#runInformationGameEstimate {
+    position: fixed;
+    top: 805px;
+    left: 55px;
+    width: 400px;
+    height: 100px;
+}
+
+#runInformationGameName {
+    position: fixed;
+    top: 525px;
+    left: 130px;
+    width: 400px;
+    height: 89px;
+}
+
+#runInformationGameCategory {
+    position: fixed;
+    top: 620px;
+    left: 130px;
+    width: 500px;
+    height: 89px;
+}
+
