@@ -18,39 +18,16 @@
     border: 2px solid rgba(150,91,222,0.2);
 }
 
-#runInformationFields {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-#runInformationTopRow {
-    width: 100%;
-    height: 42%;
-    min-height: 42%;
-    background: #432c65;
-    display: flex;
-    flex-flow: row;
-}
-
-#runInformationBottomRow {
-    width: 100%;
-    height: 49%;
-    display: flex;
-    flex-flow: row;
-    overflow: hidden;
-}
-
 #runInformationGameName {
     font-family: FFFForward;
-    font-size: 16px;
-    line-height: 42px;
+    font-size: 20px;
+    line-height: 100px;
     text-align: left;
-    color: white;
+    color: #aeebe0;
     white-space: nowrap;
     overflow: hidden;
+    vertical-align: middle;
+    width: 400px;
 }
 
 #runGameNameIcon {
@@ -68,7 +45,7 @@ img.runInformationGameNameImage {
 #runInformationGameCategory {
     font-family: FFFForward;
     font-size: 14px;
-    color: white;
+    color: #aeebe0;
     text-align: left;
     white-space: nowrap;
     line-height: 58px;

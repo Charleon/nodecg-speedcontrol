@@ -23,8 +23,8 @@ body {
     background-image: url('/graphics/nodecg-speedcontrol/images/BackgroundImage.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1280px;
-    height: 720px;
+    width: 1920px;
+    height: 1080px;
     overflow: hidden;
     color: white;
     margin: 0px;
@@ -50,8 +50,7 @@ body {
     color: white;
     font-family: FFFForward;
     font-size: 1em;
-    height: 6%;
-    background-color: rgba(0,0,0,0.3);
+    height: 40px;
     overflow: hidden;
 }
 

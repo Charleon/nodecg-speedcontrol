@@ -3,9 +3,7 @@
     top: 400px;
     left: 700px;
     width: 440px;
-    height: 140px;
-    background: rgba(0,0,0,0.2);
-    border: 2px solid rgba(150,91,222,0.1);
+    height: 90px;
 }
 
 #timer {
@@ -17,26 +15,29 @@
 }
 
 #runInformationGameEstimate {
-    position: relative;
-    top: 10%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 100px;
     font-family: FFFForward;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
-    color: rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.5);
 }
 
 .timer_paused {
-    color: cornflowerblue;
+    color: #8cbeb6;
 }
 
 .timer_running {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 1);
 }
 
 .timer_stopped {
-    color: gray;
+    color: #aeebe0;
 }
 
 .timer_finished {
-    color: #e8c419;
+    color: #fdd224;
 }

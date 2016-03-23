@@ -67,7 +67,7 @@ $(function () {
             clearTimeout(timeoutTwitch);
         }
 
-        timeoutTwitch = setTimeout(displayTwitchInstead, 2000);
+        //timeoutTwitch = setTimeout(displayTwitchInstead, 2000);
     });
 
     // Replicant functions ###
@@ -165,7 +165,7 @@ $(function () {
         });
 
 
-        timeoutTwitch = setTimeout(hideTwitch,displayTwitchforMilliseconds);
+       // timeoutTwitch = setTimeout(hideTwitch,displayTwitchforMilliseconds);
     }
 
     function hideTwitch() {
@@ -196,7 +196,7 @@ $(function () {
         });
 
 
-        timeoutTwitch = setTimeout(displayTwitchInstead,intervalToNextTwitchDisplay);
+       // timeoutTwitch = setTimeout(displayTwitchInstead,intervalToNextTwitchDisplay);
     }
 
     function hideTimerFinished(index) {

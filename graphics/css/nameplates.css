@@ -30,14 +30,13 @@ img.playerDelimiter {
 /* Top Level */
 .playerContainer {
     position: fixed;
-    top: 200px;
-    left: 200px;
-    width: 440px;
-    height: 70px;
-    display: flex;
+    top: 0;
+    left: 0px;
+    width: 400px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
     overflow: hidden;
-    background-color: rgba(0,0,0,0.2);
-    border: 2px solid rgba(150,91,222,0.1);
 }
 
 .runnerLogo {
@@ -47,13 +46,17 @@ img.playerDelimiter {
 }
 
 .runnerInfo {
+    position: absolute;
     font-family: FFFForward;
-    color: #8d7996;
-    line-height: 70px;
-    font-size: 20px;
-    height: 100%;
-    width: 100%;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 100px;
+    color: #aeebe0;
+    line-height: 100px;
+    font-size: 30px;
     vertical-align: middle;
-    padding-left: 15px;
-    flex: 1;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
 }

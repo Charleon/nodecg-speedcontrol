@@ -18,14 +18,19 @@
     "compatibleRange": "~0.7.0",
     "graphics": [
       {
-        "file": "Intermission.html",
-        "width": 1280,
-        "height": 720
+        "file": "Single_4_3.html",
+        "width": 1920,
+        "height": 1080
       },
       {
-        "file": "Single_4_3.html",
-        "width": 1280,
-        "height": 720
+        "file": "Race_4_3.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "Single_16_9.html",
+        "width": 1920,
+        "height": 1080
       }
     ],
     "dashboardPanels": [
