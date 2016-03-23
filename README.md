@@ -18,7 +18,7 @@ that would before would have meant manual work for people working with the overl
 
 ## Installation (including installation of NodeCG)
 
-There are two prerequisites to get SpeedControl and NodeCG working.
+There are two prerequisites to get SpeedControl working.
 * Download and install git (https://git-scm.com/)
 * Download and install nodejs (v 4.2.4 or later) (https://nodejs.org/)
 * Make a folder anywhere named nodecg (or whatever you want)
@@ -39,11 +39,30 @@ In the prompt, type
 ‘nodecg install charleon/nodecg-speedcontrol’
 ```
 
-Whenever you want to start NodeCG open the git bash prompt in the nodecg folder and type `nodecg start` (or `node index.js`). You can minimize the prompt if you'd like but it has to be running for NodeCG to work. If you get tired of doing this each time you want to start the server, you can make a shortcut to nodejs.exe in the nodejs installation folder and then in the properties of the shortcut, throw in the full path to nodecg/index.js. This will enable you to start the server with just a doubleclick!
+After this step you have successfully installed nodecg! there is one little step left, however; since you're currently using the ESA configuration, and you want to apply the Deuceler specific configuration.
+
+Go into `nodecg/bundles/nodecg-speedcontrol`, rightclick, and once again open up the git bash prompt.
+in the prompt type: 
+`git checkout deucelermarathon`
+
+And you're done!
+
+Whenever you want to start the NodeCG server (speedcontrol), open the git bash prompt in the nodecg root folder and type `nodecg start` (or `node index.js`). You can minimize the prompt if you'd like but it has to be running for NodeCG to work in xSplit/OBS. If you get tired of doing this each time you want to start the server, you can make a shortcut to nodejs.exe in the nodejs installation folder and then in the properties of the shortcut, throw in the full path to nodecg/index.js. This will enable you to start the server with just a doubleclick!
 
 The above step set up a local server on your computer so you can now test it out! either in your browser (Chrome is the only one that gives the CORRECT result), or in xSplit or OBS For OBS you need the CLR Browser Plugin, but the latest xSplit version already has support to add web url:s using the "Add page URL.." option. 
 
 If I make an update to speedcontrol, or whenever you want to be sure you have the latest version installed, open the git bash window in `nodecg/bundles/nodecg-speedcontrol` and type in “git pull” to fetch all the newest changes! (yes, it’s that easy)
+
+##Setting up the overlay##
+Once you've gotten used to the dashboard and want to look at the actual overlays you can find the link to them by clicking the menu in the top left corner of the dashboard and then choose "graphics", which lists the URL:s to all the overlays that you should add to the CLR browser plugin. You can try them out in your browser first to see how they look like. Please be adviced that Google Chrome is the ONLY browser that gives a correct representation, since both xSplit and OBS CLR browser plugin builds on the chrome engine.
+
+The only thing left to do now is to either import your horaro schedule into speedcontrol, OR add all the runs manually with a click of the "Add run RAW" button in the Player control part of the dashboard. Please be adviced that if you're importing from horaro, the schedule NEEDS to follow a specific column format, more specifically, the one used here: https://horaro.org/preesa/schedule
+that is: Game, Estimate, Runner(if more than one, separate them with a ','), Twitch handle, Platform, Category. The columns need to be there, but you can just leave twitch handles and platform blank since these overlays does not display that information.
+After you're done you can paste the link to the horaro schedule into the horaro importer part of speedcontrol. If there are any errors in the import you can see some error printouts in the chrome console by pressing `ctrl+shift+j` in the dashboard. If anything for some reason stops functioning, there is a big chance that the dashboard somehow has crashed and you should look in the chrome console to see the error-trace and send it back to me so I can fix it for the future. For just temporarily fixing the problem though, you can just reload the dashboard with F5 or ctrl+F5.
+
+After you've imported the runs, I advice you to play around with the dashboard and look at how it interacts with the actual overlays before going live with it in a marathon.
+
+God speed!
 
 ## bundle configuration
 in nodecg/cfg create a nodecg-speedcontrol.json file optionally and fill with the following:
