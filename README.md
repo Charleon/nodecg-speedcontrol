@@ -43,7 +43,9 @@ After this step you have successfully installed nodecg! there is one little step
 
 Go into `nodecg/bundles/nodecg-speedcontrol`, rightclick, and once again open up the git bash prompt.
 in the prompt type: 
-`git checkout deucelermarathon`
+```
+’git checkout deucelermarathon’
+```
 
 And you're done!
 
